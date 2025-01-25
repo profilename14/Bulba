@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     float moveSpeed = 1;
     bool moving = false;
     Camera cam;
+    [SerializeField] private LayerMask ObstructionLayerMask;
     
     void Start()
     {
@@ -20,16 +21,19 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            transform.rotation = GetMouseRotation();
-            lockedMoveDirection = GetMousePosition() - transform.position;
-            lockedMoveDirection = lockedMoveDirection.normalized;
-            moving = true;
-
-            if (curMoveNode != null)
+            if (!checkPathForObstruction(GetMousePosition()))
             {
-                Destroy(curMoveNode);
+                transform.rotation = GetMouseRotation();
+                lockedMoveDirection = GetMousePosition() - transform.position;
+                lockedMoveDirection = lockedMoveDirection.normalized;
+                moving = true;
+
+                if (curMoveNode != null)
+                {
+                    Destroy(curMoveNode);
+                }
+                curMoveNode = Instantiate(movementNode, GetMousePosition(), Quaternion.Euler(0, 0, 0));
             }
-            curMoveNode = Instantiate(movementNode, GetMousePosition(), Quaternion.Euler(0, 0, 0));
         }
 
         if (moving)
@@ -58,5 +62,22 @@ public class PlayerController : MonoBehaviour
         return( Quaternion.Euler(new Vector3(0, 0, angle)) );
     }
 
+    bool checkPathForObstruction(Vector3 targetPosition)
+    {
+        Vector3 fwd = targetPosition - transform.position;
+        float rayDistance = fwd.magnitude;
+        fwd = fwd.normalized;
+
+        Debug.DrawRay(transform.position, fwd * rayDistance, Color.green);
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, fwd, rayDistance, ObstructionLayerMask);
+
+        if (hit) {
+            Debug.Log("There is something in front of the object!" + hit.transform.gameObject.tag);
+            return true;
+        }
+
+        return false;
+    }
 
 }

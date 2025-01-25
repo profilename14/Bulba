@@ -220,9 +220,11 @@ GameObject:
   - component: {fileID: 190147021}
   - component: {fileID: 190147020}
   - component: {fileID: 190147019}
-  m_Layer: 0
+  - component: {fileID: 190147024}
+  - component: {fileID: 190147025}
+  m_Layer: 7
   m_Name: sprite_0
-  m_TagString: Untagged
+  m_TagString: Impassible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285,7 +287,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190147018}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -402,6 +404,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &190147024
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190147018}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 3.3911011, y: 0.6347647}
+  - {x: 1.1765025, y: -2.0921273}
+  - {x: -1.2139317, y: -3.004592}
+  - {x: -3.228164, y: -3.1076756}
+  - {x: -3.8320649, y: -2.193818}
+  - {x: -3.3784826, y: -1.3436196}
+  - {x: -0.73814607, y: -1.2904391}
+  - {x: 0.6406081, y: -0.31620264}
+  - {x: 0.9424255, y: 1.6072936}
+  - {x: 1.9280939, y: 2.9776542}
+  - {x: 3.6300597, y: 3.1341505}
+  - {x: 3.71765, y: 1.2843673}
+  - {x: 3.313601, y: 0.5355826}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!50 &190147025
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190147018}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +754,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4020460368841056190, guid: 5ea5882ebc782934c874af3d65aaf09a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4260955030041931699, guid: 5ea5882ebc782934c874af3d65aaf09a, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -678,6 +765,26 @@ PrefabInstance:
     - target: {fileID: 4553877138252310618, guid: 5ea5882ebc782934c874af3d65aaf09a, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553877138252310618, guid: 5ea5882ebc782934c874af3d65aaf09a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553877138252310618, guid: 5ea5882ebc782934c874af3d65aaf09a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5224694203551051646, guid: 5ea5882ebc782934c874af3d65aaf09a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843180333356931086, guid: 5ea5882ebc782934c874af3d65aaf09a, type: 3}
+      propertyPath: PlayerLayerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843180333356931086, guid: 5ea5882ebc782934c874af3d65aaf09a, type: 3}
+      propertyPath: ObstructionLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
