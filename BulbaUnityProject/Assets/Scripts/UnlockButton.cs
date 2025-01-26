@@ -40,10 +40,15 @@ public class UnlockButton : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        button.interactable = unlock.price <= StatsSingleton.Instance.Research;
+    }
+
     private void OnClick()
     {
         gameObject.SetActive(false);
-        //TODO Pay price
+        StatsSingleton.Instance.Research -= unlock.price;
         unlock.Unlock();
     }
 }
