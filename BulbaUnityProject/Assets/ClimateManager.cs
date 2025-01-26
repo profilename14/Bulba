@@ -16,6 +16,7 @@ public class ClimateManager : MonoBehaviour
     public bool isWithinHighNutrition = false;
     public bool isWithinPoison  = false;
 
+    public ClimateMap CurrentClimates => conditionBitmap;
     private ClimateMap conditionBitmap = 0; // bitflag containing the conditionBitmaps in each bit as bools. Ex, 3 is in cold and extreme cold. (0011)
 
     public List<ClimateZone> curClimates;
