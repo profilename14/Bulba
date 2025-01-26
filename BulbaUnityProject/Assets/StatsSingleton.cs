@@ -104,11 +104,15 @@ public class StatsSingleton : MonoBehaviour {
         energyUse = baseEnergyUse;
         foreach (Plant plant in curPlants)
         {
-            baseTemperature += plant.heating * lightLevelModifier;
-            baseTemperature -= plant.cooling * lightLevelModifier;
-            lightLevelModifier += plant.lumination;
-            energyGen += plant.energyProduction * lightLevelModifier;
-            energyUse += plant.energyConsumption;
+            if (plant.FullyGrown)
+            {
+                baseTemperature += plant.heating;
+                baseTemperature -= plant.cooling;
+                lightLevelModifier += plant.lumination;
+                energyGen += plant.energyProduction * lightLevelModifier;
+                energyUse += plant.energyConsumption;
+            }
+            
 
         }
     }
@@ -119,22 +123,21 @@ public class StatsSingleton : MonoBehaviour {
         {
             if (fertilizer > plant.fertilizerCostPerSecond )
             {
-                Debug.Log(fertilizerModifier);
-                fertilizer -= plant.fertilizerCostPerSecond * Time.deltaTime * fertilizerModifier * 0.5f;
+                fertilizer -= plant.fertilizerCostPerSecond * Time.deltaTime * fertilizerModifier;
             }
             else
             {
-                plant.SetHealth(plant.Health - Time.deltaTime * plant.growthRate * 0.5f);
+                plant.SetHealth(plant.Health - Time.deltaTime * plant.growthRate);
             }
 
             if (energyUse - 2 > energyGen)
             {
-                plant.SetHealth(plant.Health - Time.deltaTime * plant.growthRate * 0.5f);
+
             }
 
             if (temperature > 0.7f || temperature < 0.3f)
             {
-                plant.SetHealth(plant.Health - Time.deltaTime * plant.growthRate * 0.5f);
+                plant.SetHealth(plant.Health - Time.deltaTime * plant.growthRate);
             }
 
             if (plant.Health < 1)

@@ -32,11 +32,11 @@ public class PlayerController : MonoBehaviour
             transform.position += lockedMoveDirection * moveSpeed * Time.deltaTime;
         }
 
-        if (curMoveNode != null && Mathf.Abs(transform.position.x - curMoveNode.transform.position.x) < 0.05) {
-            if (Mathf.Abs(transform.position.y - curMoveNode.transform.position.y) < 0.05) {
-                Destroy(curMoveNode);
-                moving = false;
-            }
+        bool hasEnoughEnergy = (StatsSingleton.Instance.energyGen >= StatsSingleton.Instance.energyUse);
+
+        if (curMoveNode != null && ( Mathf.Abs(transform.position.x - curMoveNode.transform.position.x) < 0.05 || !canMove || !hasEnoughEnergy)) {
+            Destroy(curMoveNode);
+            moving = false;
         }
     }
 

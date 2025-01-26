@@ -23,6 +23,8 @@ public class PlantingSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         PlantedPlant.cooling = plantType.cooling;
         PlantedPlant.lumination = plantType.lumination;
 
+        StatsSingleton.Instance.fertilizer -= plantType.cost;
+
     }
 
     public static bool TryGetHoveredPlantingSlot(out PlantingSlot plantingSlot)

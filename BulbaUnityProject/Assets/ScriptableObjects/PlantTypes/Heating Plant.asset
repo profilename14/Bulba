@@ -21,3 +21,4 @@ MonoBehaviour:
   heating: 0.2
   cooling: 0
   lumination: 0
+  cost: 60

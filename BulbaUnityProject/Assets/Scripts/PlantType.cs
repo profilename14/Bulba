@@ -12,4 +12,5 @@ public class PlantType : ScriptableObject
     public float heating = 0; // Should be from 0-0.5
     public float cooling = 0; // Should be from 0-0.5
     public float lumination = 0; // Should be from 0-0.5 but not neccessarily
+    public float cost = 0; // Should be from 0-0.5 but not neccessarily
 }
