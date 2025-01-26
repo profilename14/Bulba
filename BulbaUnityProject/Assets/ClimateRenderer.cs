@@ -49,7 +49,7 @@ public class ClimateRenderer : MonoBehaviour
                     {
                         if (climate.HasFlag(flagColor.map))
                         {
-                            particleParams.position = point + Random.insideUnitCircle/2;
+                            particleParams.position = (Vector3)(point + Random.insideUnitCircle / 2) + Vector3.forward * transform.position.z;
                             particleParams.startColor = flagColor.color;
                             particleSystem.Emit(particleParams, spawnCount);
                         }

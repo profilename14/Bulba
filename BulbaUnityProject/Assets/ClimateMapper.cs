@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public static class ClimateMapper
 {
-    private const int unitsPerMeter = 4;
+    private const int unitsPerMeter = 2;
     private static Dictionary<Vector2Int, ClimateMap> points = new Dictionary<Vector2Int, ClimateMap>();
 
     static ClimateMapper()
