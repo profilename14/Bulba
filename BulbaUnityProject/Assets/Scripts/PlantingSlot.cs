@@ -13,6 +13,15 @@ public class PlantingSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             Destroy(PlantedPlant.gameObject);
 
         PlantedPlant = Instantiate(plantType.plantPrefab, transform);
+        
+        PlantedPlant.fertilizerCostPerSecond = plantType.fertilizerCostPerSecond;
+        PlantedPlant.DNAProductionPerSecond = plantType.DNAProductionPerSecond;
+        PlantedPlant.energyProduction = plantType.energyProduction;
+        PlantedPlant.energyConsumption = plantType.energyConsumption;
+        PlantedPlant.heating = plantType.heating;
+        PlantedPlant.cooling = plantType.cooling;
+        PlantedPlant.lumination = plantType.lumination;
+
     }
 
     public static bool TryGetHoveredPlantingSlot(out PlantingSlot plantingSlot)

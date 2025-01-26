@@ -33,6 +33,8 @@ public class StatsSingleton : MonoBehaviour {
         } else {
             _instance = this;
         }
+
+        curPlants = new List<Plant>();
     }
 
     private void Start()
@@ -74,6 +76,8 @@ public class StatsSingleton : MonoBehaviour {
         if (climateManager.isWithinPoison)
             baseFertilizerModifier += 0.5f;
 
+        UpdatePlantList();
+
         UpdateExternalPlants();
 
         UpdatePlants();
@@ -82,7 +86,7 @@ public class StatsSingleton : MonoBehaviour {
         
     }
 
-    void updatePlantList()
+    void UpdatePlantList()
     {
         curPlants.Clear();
         foreach (PlantingSlot slot in garden.PlantingSlots)
@@ -100,10 +104,10 @@ public class StatsSingleton : MonoBehaviour {
         energyUse = baseEnergyUse;
         foreach (Plant plant in curPlants)
         {
-            baseTemperature += plant.heating;
-            baseTemperature -= plant.cooling;
+            baseTemperature += plant.heating * lightLevelModifier;
+            baseTemperature -= plant.cooling * lightLevelModifier;
             lightLevelModifier += plant.lumination;
-            energyGen += plant.energyProduction;
+            energyGen += plant.energyProduction * lightLevelModifier;
             energyUse += plant.energyConsumption;
 
         }
@@ -113,16 +117,16 @@ public class StatsSingleton : MonoBehaviour {
     {
         foreach (Plant plant in curPlants)
         {
-            if (fertilizer > plant.fertilizerCostPerSecond)
+            if (fertilizer > plant.fertilizerCostPerSecond )
             {
-                fertilizer -= plant.fertilizerCostPerSecond * Time.deltaTime;
+                fertilizer -= plant.fertilizerCostPerSecond * Time.deltaTime * fertilizerModifier;
             }
             else
             {
                 plant.SetHealth(plant.Health - Time.deltaTime * plant.growthRate);
             }
 
-            if (energyUse > energyGen - 2)
+            if (energyUse - 2 > energyGen)
             {
                 plant.SetHealth(plant.Health - Time.deltaTime * plant.growthRate);
             }

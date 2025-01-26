@@ -16,6 +16,16 @@ public class PlantPaletteOption : MonoBehaviour, IBeginDragHandler, IDragHandler
 
     private DraggedIcon draggedIcon;
 
+
+    [SerializeField] public float fertilizerCostPerSecond = 0;
+    [SerializeField] public float DNAProductionPerSecond = 0;
+    [SerializeField] public float energyProduction = 0;
+    [SerializeField] public float energyConsumption = 0;
+    [SerializeField] public float heating = 0; // Should be from 0-0.5
+    [SerializeField] public float cooling = 0; // Should be from 0-0.5
+    [SerializeField] public float lumination = 0; // Should be from 0-0.5 but not neccessarily
+
+
     public void Setup(PlantType plantType)
     {
         this.plantType = plantType;

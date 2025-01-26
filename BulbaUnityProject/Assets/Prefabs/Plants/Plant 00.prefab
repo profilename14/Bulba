@@ -90,3 +90,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1950797875024480270}
   growthRate: 0.25
+  fertilizerCostPerSecond: 0
+  DNAProductionPerSecond: 0
+  energyProduction: 0
+  energyConsumption: 0
+  heating: 0
+  cooling: 0
+  lumination: 0.3

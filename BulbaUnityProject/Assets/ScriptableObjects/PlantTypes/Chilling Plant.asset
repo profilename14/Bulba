@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: b339fb99f186b3947910d8c74bc6be42, type: 3}
   plantPrefab: {fileID: 4457720011319557584, guid: 1003c71fda83ad04ca9d55f699b40d88, type: 3}
+  fertilizerCostPerSecond: 0.5
+  DNAProductionPerSecond: 0
+  energyProduction: 0
+  energyConsumption: 1
+  heating: 0
+  cooling: 0.2
+  lumination: 0
