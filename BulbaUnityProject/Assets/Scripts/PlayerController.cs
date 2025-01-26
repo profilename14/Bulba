@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private GameObject curMoveNode;
     Vector3 lockedMoveDirection;
     public float moveSpeed = 1;
+    public bool IsMoving => moving;
     bool moving = false;
     Camera cam;
     [SerializeField] private LayerMask ObstructionLayerMask;
