@@ -119,7 +119,7 @@ public class StatsSingleton : MonoBehaviour {
         {
             if (fertilizer > plant.fertilizerCostPerSecond )
             {
-                fertilizer -= plant.fertilizerCostPerSecond * Time.deltaTime * fertilizerModifier;
+                fertilizer -= plant.fertilizerCostPerSecond * Time.deltaTime * fertilizerModifier * 0.5f;
             }
             else
             {
