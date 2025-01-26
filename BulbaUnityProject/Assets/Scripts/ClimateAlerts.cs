@@ -58,7 +58,7 @@ public class ClimateAlerts : MonoBehaviour
             ClimateMap.isDark => "Reduced Light:\nProduction Reduced",
             ClimateMap.isHighLight => "High Light:\nProduction Accelerated",
             ClimateMap.isHighNutrition => "High Nutrition:\nEfficient Fertilizer Use",
-            ClimateMap.isPoison => "Poison Detected:\nPlants May Die",
+            ClimateMap.isPoison => "Poison Detected:\nFertilizer Consumption Increased",
             _ => ""
         };
     }
