@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MapTravelTest.unity
     guid: 83a7cc5a18583884db7e59c6e35b7184
   - enabled: 1
-    path: Assets/UI.unity
+    path: Assets/Scenes/UI.unity
     guid: 824f1af8403e075469802d7c82aef099
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

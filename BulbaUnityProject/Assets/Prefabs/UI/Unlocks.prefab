@@ -108,11 +108,11 @@ RectTransform:
   - {fileID: 6703191896358326061}
   m_Father: {fileID: 457849528052795679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: 0, y: 100}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &6746953311254773707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240624376317366953}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Content: {fileID: 5697465550536354769}
   m_Horizontal: 1
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -1261,7 +1261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingUnlocks:
-  - {fileID: 11400000, guid: 53f5810ac97aa3748867212d66439951, type: 2}
   - {fileID: 11400000, guid: 21d2414fb81d44742a582225f2b2574b, type: 2}
   - {fileID: 11400000, guid: 6c87530c2f8519443b4789f86084dea1, type: 2}
   unlockButtonTemplate: {fileID: 2703647533199058145}

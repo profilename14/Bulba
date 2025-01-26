@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject movementNode;
     private GameObject curMoveNode;
     Vector3 lockedMoveDirection;
-    float moveSpeed = 1;
+    public float moveSpeed = 1;
     bool moving = false;
     Camera cam;
     [SerializeField] private LayerMask ObstructionLayerMask;
@@ -16,28 +16,16 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+        WorldClicked.OnClick += HandleClick;
+    }
+
+    private void OnDestroy()
+    {
+        WorldClicked.OnClick -= HandleClick;
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            bool hasEnoughEnergy = (StatsSingleton.Instance.energyGen >= StatsSingleton.Instance.energyUse);
-            if (!checkPathForObstruction(GetMousePosition()) && canMove && hasEnoughEnergy)
-            {
-                transform.rotation = GetMouseRotation();
-                lockedMoveDirection = GetMousePosition() - transform.position;
-                lockedMoveDirection = lockedMoveDirection.normalized;
-                moving = true;
-
-                if (curMoveNode != null)
-                {
-                    Destroy(curMoveNode);
-                }
-                curMoveNode = Instantiate(movementNode, GetMousePosition(), Quaternion.Euler(0, 0, 0));
-            }
-        }
-
         if (moving)
         {
             transform.position += lockedMoveDirection * moveSpeed * Time.deltaTime;
@@ -48,6 +36,24 @@ public class PlayerController : MonoBehaviour
                 Destroy(curMoveNode);
                 moving = false;
             }
+        }
+    }
+
+    private void HandleClick()
+    {
+        bool hasEnoughEnergy = (StatsSingleton.Instance.energyGen >= StatsSingleton.Instance.energyUse);
+        if (!checkPathForObstruction(GetMousePosition()) && canMove && hasEnoughEnergy)
+        {
+            transform.rotation = GetMouseRotation();
+            lockedMoveDirection = GetMousePosition() - transform.position;
+            lockedMoveDirection = lockedMoveDirection.normalized;
+            moving = true;
+
+            if (curMoveNode != null)
+            {
+                Destroy(curMoveNode);
+            }
+            curMoveNode = Instantiate(movementNode, GetMousePosition(), Quaternion.Euler(0, 0, 0));
         }
     }
 
