@@ -15,6 +15,10 @@ public class Garden : MonoBehaviour
 
     protected void Start()
     {
+        if (plantingSlotTemplate.gameObject.scene != default)
+        {
+            plantingSlotTemplate.gameObject.SetActive(false);
+        }
         plantingSlotTemplate.gameObject.SetActive(false);
 
         plantingSlots = new PlantingSlot[plantingSlotCount];
@@ -26,14 +30,5 @@ public class Garden : MonoBehaviour
 
         
         StatsSingleton.Instance.garden = this;
-    }
-
-    private void OnValidate()
-    {
-        if (plantingSlotTemplate && plantingSlotTemplate.gameObject.scene == default)
-        {
-            plantingSlotTemplate = null;
-            Debug.LogError($"{nameof(plantingSlotTemplate)} is a prefab. Expected an in scene template");
-        }
     }
 }
