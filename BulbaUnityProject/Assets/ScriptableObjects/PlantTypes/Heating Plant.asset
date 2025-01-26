@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8102e9698a9ea4fb2005641f0f36d9, type: 3}
+  m_Name: Heating Plant
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 7de484d4b28321c49a4a49259bd26e68, type: 3}
+  plantPrefab: {fileID: 4457720011319557584, guid: d8088f8d354a7584283a1d10818f39f6, type: 3}

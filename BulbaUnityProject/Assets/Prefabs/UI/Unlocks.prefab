@@ -677,7 +677,7 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: -1
-  m_PreferredWidth: -1
+  m_PreferredWidth: 100
   m_PreferredHeight: -1
   m_FlexibleWidth: 0
   m_FlexibleHeight: -1
@@ -1261,7 +1261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingUnlocks:
-  - {fileID: 11400000, guid: 8dda6a2c6f824944fa22bcd9b58ecd57, type: 2}
+  - {fileID: 11400000, guid: 53f5810ac97aa3748867212d66439951, type: 2}
+  - {fileID: 11400000, guid: 21d2414fb81d44742a582225f2b2574b, type: 2}
+  - {fileID: 11400000, guid: 6c87530c2f8519443b4789f86084dea1, type: 2}
   unlockButtonTemplate: {fileID: 2703647533199058145}
 --- !u!1 &8450798944958733686
 GameObject:
