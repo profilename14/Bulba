@@ -23,6 +23,9 @@ public class Garden : MonoBehaviour
             plantingSlots[i] = Instantiate(plantingSlotTemplate, plantingSlotTemplate.transform.parent);
             plantingSlots[i].gameObject.SetActive(true);
         }
+
+        
+        StatsSingleton.Instance.garden = this;
     }
 
     private void OnValidate()

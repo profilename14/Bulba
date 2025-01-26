@@ -237,7 +237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &628445670
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1081,6 +1081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInterface: []
+  playerController: {fileID: 0}
 --- !u!224 &1916506335 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7839007059120270012, guid: c16bc04b01f3875459f99f796ff694fd, type: 3}

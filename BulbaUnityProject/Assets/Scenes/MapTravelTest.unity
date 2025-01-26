@@ -294,6 +294,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &185550403 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5843180333356931086, guid: 5ea5882ebc782934c874af3d65aaf09a, type: 3}
+  m_PrefabInstance: {fileID: 6741638236304971382}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185550397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3410d702e6edfec41819ea79dc7185cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &190147018
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +845,7 @@ MonoBehaviour:
   baseTemperature: 0.5
   temperature: 0.5
   climateManager: {fileID: 185550400}
+  playerController: {fileID: 185550403}
 --- !u!4 &1322500328
 Transform:
   m_ObjectHideFlags: 0

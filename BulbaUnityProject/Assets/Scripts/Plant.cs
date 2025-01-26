@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,13 +8,29 @@ public class Plant : MonoBehaviour
     private Image image;
 
     [SerializeField]
-    private float growthRate;
+    public float growthRate;
 
     private float growth;
     public bool FullyGrown => growth >= 1;
 
     public float Health => health;
     private float health = 1;
+
+
+    [SerializeField] public float fertilizerCostPerSecond = 0;
+    [SerializeField] public float DNAProductionPerSecond = 0;
+    [SerializeField] public float energyProduction = 0;
+    [SerializeField] public float energyConsumption = 0;
+    [SerializeField] public float heating = 0; // Should be from 0-0.5
+    [SerializeField] public float cooling = 0; // Should be from 0-0.5
+    [SerializeField] public float lumination = 0; // Should be from 0-0.5 but not neccessarily
+
+
+
+    protected void Start()
+    {
+        
+    }
 
     protected void Update()
     {
@@ -25,5 +42,10 @@ public class Plant : MonoBehaviour
         image.color = Color.Lerp(Color.black, Color.white, health);
         if (health <= 0)
             Destroy(gameObject);
+    }
+
+    public void SetHealth(float newHealth)
+    {
+        health = newHealth;
     }
 }
