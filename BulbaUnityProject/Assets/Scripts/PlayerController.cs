@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (!checkPathForObstruction(GetMousePosition()) && canMove)
+            bool hasEnoughEnergy = (StatsSingleton.Instance.energyGen >= StatsSingleton.Instance.energyUse);
+            if (!checkPathForObstruction(GetMousePosition()) && canMove && hasEnoughEnergy)
             {
                 transform.rotation = GetMouseRotation();
                 lockedMoveDirection = GetMousePosition() - transform.position;

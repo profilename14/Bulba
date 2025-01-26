@@ -18,7 +18,7 @@ public class ClimateManager : MonoBehaviour
 
     private ClimateMap conditionBitmap = 0; // bitflag containing the conditionBitmaps in each bit as bools. Ex, 3 is in cold and extreme cold. (0011)
 
-    List<ClimateZone> curClimates;
+    public List<ClimateZone> curClimates;
 
     
     void Start()

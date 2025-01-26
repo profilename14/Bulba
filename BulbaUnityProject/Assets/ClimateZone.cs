@@ -23,6 +23,5 @@ public class ClimateZone : MonoBehaviour
 
     void Awake() {
 
-        Debug.Log("Resulted in a bitmap of " + myClimateMap);
     }
 }
