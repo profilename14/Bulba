@@ -7,6 +7,6 @@ public class LightLevelStatUI : MonoBehaviour
 
     void Update()
     {
-        slider.value = StatsSingleton.Instance.lightLevelModifier;
+        slider.value = StatsSingleton.Instance.lightLevelModifier/2f;
     }
 }
