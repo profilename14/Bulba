@@ -35,7 +35,7 @@ public class Plant : MonoBehaviour
     protected void Update()
     {
         growth += growthRate * Time.deltaTime;
-        transform.localScale = Vector3.one * Mathf.Lerp(.25f, 1.7f, Mathf.Clamp01(growth));
+        transform.localScale = Vector3.one * Mathf.Lerp(.5f, 1.7f, Mathf.Clamp01(growth));
 
         var healthChangePerSecond = 0;//TODO damage and recovery based on zones
         health = Mathf.Clamp01(health + healthChangePerSecond * Time.deltaTime);

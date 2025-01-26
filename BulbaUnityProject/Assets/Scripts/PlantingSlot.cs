@@ -14,7 +14,7 @@ public class PlantingSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         PlantedPlant = Instantiate(plantType.plantPrefab, transform);
         PlantedPlant.transform.position -= new Vector3 (0, 12.5f, 0);
-        
+        PlantedPlant.transform.SetSiblingIndex(0);
         PlantedPlant.fertilizerCostPerSecond = plantType.fertilizerCostPerSecond;
         PlantedPlant.DNAProductionPerSecond = plantType.DNAProductionPerSecond;
         PlantedPlant.energyProduction = plantType.energyProduction;
