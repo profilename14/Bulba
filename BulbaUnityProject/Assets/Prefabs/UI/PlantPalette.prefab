@@ -536,8 +536,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbd980cfa0b516c4f9825bef0d17c43d, type: 2}
+  m_sharedMaterial: {fileID: 2226402565654719677, guid: cbd980cfa0b516c4f9825bef0d17c43d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4100904576779376131}
   m_HandleRect: {fileID: 167166037529278269}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -962,8 +962,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4094192345194802076}
   m_HandleRect: {fileID: 2796223625644597151}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.915
+  m_Value: 0.9999982
+  m_Size: 0.9149999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1146,8 +1146,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Drag to plant
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbd980cfa0b516c4f9825bef0d17c43d, type: 2}
+  m_sharedMaterial: {fileID: 2226402565654719677, guid: cbd980cfa0b516c4f9825bef0d17c43d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
