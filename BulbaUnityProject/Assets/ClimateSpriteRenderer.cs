@@ -26,7 +26,7 @@ public class ClimateSpriteRenderer : MonoBehaviour
         var particleParams = new ParticleSystem.EmitParams();
         foreach ((var point, var pointClimate) in ClimateMapper.GetClimatePointsInRect(worldRect))
         {
-            if (pointClimate.HasFlag(climate))
+            if ((pointClimate & climate) != 0)
             {
                 particleParams.position = (Vector3)(point + Random.insideUnitCircle / 2) + Vector3.forward * transform.position.z;
                 float particleCount = particlesPerSecond * Time.deltaTime;
