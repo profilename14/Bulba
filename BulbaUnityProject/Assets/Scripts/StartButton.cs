@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class StartButton : MonoBehaviour
 {
     public Button button;
+    public int scene = 1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +17,6 @@ public class StartButton : MonoBehaviour
     private void OnClick()
     {
         Debug.Log("Starting");
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 }

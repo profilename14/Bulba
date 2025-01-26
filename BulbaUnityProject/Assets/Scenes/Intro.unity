@@ -927,7 +927,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1002831243}
-  scene: 4
 --- !u!114 &1002831242
 MonoBehaviour:
   m_ObjectHideFlags: 0
