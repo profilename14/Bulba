@@ -23,7 +23,7 @@ public class showAndHide : MonoBehaviour
                 isEnabled = true;
                 group.alpha = 1;
                 group.interactable = true;
-                StatsSingleton.Instance.playerController.canMove = false;
+                StatsSingleton.Instance.playerController.canMove = true;
                 
             }
             else if (isEnabled == true)

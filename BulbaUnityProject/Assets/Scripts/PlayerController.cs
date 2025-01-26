@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     private GameObject curMoveNode;
     Vector3 lockedMoveDirection;
     public float moveSpeed = 1;
-    public bool IsMoving => moving;
     bool moving = false;
+    public bool IsMoving => moving;
     Camera cam;
     [SerializeField] private LayerMask ObstructionLayerMask;
     public bool canMove = true;
@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
     private void HandleClick()
     {
         bool hasEnoughEnergy = (StatsSingleton.Instance.energyGen >= StatsSingleton.Instance.energyUse);
+        Debug.Log(hasEnoughEnergy);
+        Debug.Log(canMove);
         if (!checkPathForObstruction(GetMousePosition()) && canMove && hasEnoughEnergy)
         {
             transform.rotation = GetMouseRotation();

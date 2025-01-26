@@ -68,7 +68,7 @@ public class StatsSingleton : MonoBehaviour {
         if (climateManager.isWithinHighLight)
             baseLightLevelModifier += 0.5f;
         if (climateManager.isWithinDark)
-            baseLightLevelModifier -= 0.5f;
+            baseLightLevelModifier -= 0.25f;
 
         baseFertilizerModifier = 1f;
         if (climateManager.isWithinHighNutrition)
@@ -135,6 +135,12 @@ public class StatsSingleton : MonoBehaviour {
             {
                 plant.SetHealth(plant.Health - Time.deltaTime * plant.growthRate * 0.5f);
             }
+
+            if (plant.Health < 1)
+            {
+                plant.SetHealth(plant.Health + Time.deltaTime * plant.growthRate * 0.25f);
+            }
+                
         }
         
     }
