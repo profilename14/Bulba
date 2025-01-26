@@ -14,7 +14,7 @@ public class UnlocksUI : MonoBehaviour
 
     private void Start()
     {
-        if (unlockButtonTemplate && unlockButtonTemplate.gameObject.scene == default)
+        if (unlockButtonTemplate && unlockButtonTemplate.gameObject.scene != default)
         {
             unlockButtonTemplate.gameObject.SetActive(false);
         }

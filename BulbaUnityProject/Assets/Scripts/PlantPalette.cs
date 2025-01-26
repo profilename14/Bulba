@@ -18,7 +18,7 @@ public class PlantPalette : MonoBehaviour
         Debug.Assert(Instance == null);
         Instance = this;
 
-        if (paletteOptionTemplate.gameObject.scene == default)
+        if (paletteOptionTemplate.gameObject.scene != default)
         {
             paletteOptionTemplate.gameObject.SetActive(false);
         }
