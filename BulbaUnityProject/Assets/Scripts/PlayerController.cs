@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     bool moving = false;
     Camera cam;
     [SerializeField] private LayerMask ObstructionLayerMask;
+    public bool canMove = true;
     
     void Start()
     {
@@ -21,7 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (!checkPathForObstruction(GetMousePosition()))
+            if (!checkPathForObstruction(GetMousePosition()) && canMove)
             {
                 transform.rotation = GetMouseRotation();
                 lockedMoveDirection = GetMousePosition() - transform.position;

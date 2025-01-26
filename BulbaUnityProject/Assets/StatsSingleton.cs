@@ -17,7 +17,8 @@ public class StatsSingleton : MonoBehaviour {
     public float fertilizerModifier = 1; // this multiplies the amount consumed over time. 0.5 in nutritous areas, 1.5 in poison.
     public float baseTemperature = 0.5f; // what temperature will gradually move toward over time
     public float temperature = 0.5f; // 0.5 = neutral, 0 = coldest, 1 = warmest
-    [SerializeField] private ClimateManager climateManager;
+    [SerializeField] public ClimateManager climateManager;
+    [SerializeField] public PlayerController playerController;
 
 
     private void Awake()
