@@ -128,6 +128,11 @@ public class StatsSingleton : MonoBehaviour {
             else
             {
                 plant.SetHealth(plant.Health - Time.deltaTime * plant.growthRate);
+                if (playerController)
+                {
+                    Destroy(playerController.gameObject);
+                }
+                
             }
 
             if (energyUse - 2 > energyGen)
