@@ -23,7 +23,7 @@ public class PlantingSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         PlantedPlant.cooling = plantType.cooling;
         PlantedPlant.lumination = plantType.lumination;
 
-        StatsSingleton.Instance.fertilizer -= plantType.cost;
+        //StatsSingleton.Instance.fertilizer -= plantType.cost;
 
     }
 

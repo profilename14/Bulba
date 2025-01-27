@@ -18,7 +18,7 @@ public class fertilizer : MonoBehaviour
     {
         if (playerCollider.gameObject.tag == "Player")
         {
-            StatsSingleton.Instance.fertilizer += 60;
+            StatsSingleton.Instance.fertilizer += 75;
             Destroy(gameObject);
         }
     }

@@ -147,7 +147,7 @@ public class StatsSingleton : MonoBehaviour {
 
             if (plant.Health < 1)
             {
-                plant.SetHealth(plant.Health + Time.deltaTime * plant.growthRate * 0.25f);
+                plant.SetHealth(plant.Health + Time.deltaTime * plant.growthRate * 0.35f);
             }
                 
         }
@@ -158,8 +158,8 @@ public class StatsSingleton : MonoBehaviour {
     {
         // TODO smoothing curve
 
-        temperature = temperature + (baseTemperature - temperature) * Time.deltaTime;
-        lightLevelModifier = lightLevelModifier + (baseLightLevelModifier - lightLevelModifier) * Time.deltaTime;
-        fertilizerModifier = fertilizerModifier + (baseFertilizerModifier - fertilizerModifier) * Time.deltaTime;
+        temperature = temperature + (baseTemperature - temperature) * Time.deltaTime * 0.33f;
+        lightLevelModifier = lightLevelModifier + (baseLightLevelModifier - lightLevelModifier) * Time.deltaTime * 0.33f;
+        fertilizerModifier = fertilizerModifier + (baseFertilizerModifier - fertilizerModifier) * Time.deltaTime * 0.33f;
     }
 }
